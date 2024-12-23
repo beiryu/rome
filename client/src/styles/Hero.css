@@ -1,0 +1,54 @@
+/* Hero section styling */
+.hero {
+    height: 100vh;
+    /*background-image: url('https://via.placeholder.com/1600x900');*/
+    background-image: url("../image/hero-image.jpg");
+    /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-searchform {
+    width: 100%;
+    height: 20%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}

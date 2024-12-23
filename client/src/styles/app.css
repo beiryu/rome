@@ -1,0 +1,54 @@
+/* frontend/src/App.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+h1,
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.25rem;
+}
