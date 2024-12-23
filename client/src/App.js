@@ -11,7 +11,7 @@ import FitnessDetail from './pages/FitnessDetail';
 import SpecialistDetail from './pages/SpecialistDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
-// import ForgotPassword from "./pages/ForgotPassword";
+import ForgotPassword from './pages/ForgotPassword';
 // import AboutUs from "./pages/AboutUs";
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
 // import TermsOfUse from "./pages/TermsOfUse";
@@ -57,6 +57,7 @@ const App = () => {
             <Routes>
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/" element={<Hero />} />
               <Route path="/fitness-listing" element={<FitnessListing />} />
               <Route path="/fitness-listing/:id" element={<FitnessDetail />} />

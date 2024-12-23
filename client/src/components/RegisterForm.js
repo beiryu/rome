@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
-const Register = () => {
+const RegisterForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -132,4 +132,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterForm;
