@@ -9,7 +9,7 @@ const Hero = () => {
         <Box
           className="hero-content"
           sx={{
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            backgroundColor: "rgba(255, 255, 255, 0.7)",
             padding: {
               xs: 2,
               sm: 3,
@@ -22,13 +22,14 @@ const Hero = () => {
             },
             margin: "0 auto",
             borderRadius: 1,
+            boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.5)",
           }}
         >
           <Typography
             variant="h1"
             className="hero-title"
             sx={{
-              color: "white",
+              color: "black",
               marginBottom: "2rem",
               fontSize: {
                 xs: "1.5rem",
@@ -37,7 +38,7 @@ const Hero = () => {
               },
             }}
           >
-            Search Fitness and Specialist Listing
+            Search Fitness and Specialist
           </Typography>
 
           <Box
@@ -56,7 +57,7 @@ const Hero = () => {
               fullWidth
               placeholder="Search for fitness trainers or specialists..."
               variant="outlined"
-              sx={{ backgroundColor: "#f2f2f2" }}
+              sx={{ backgroundColor: "inherit" }}
             />
             <Button
               variant="contained"

@@ -27,7 +27,7 @@ const Header = () => {
             >
               FelizCity
             </Typography>
-            {/* <Typography
+            <Typography
               component={Link}
               to="/fitness-listing"
               sx={{
@@ -37,7 +37,7 @@ const Header = () => {
                 alignItems: "center",
               }}
             >
-              Fitness Listing
+              Fitness
             </Typography>
             <Typography
               component={Link}
@@ -49,8 +49,8 @@ const Header = () => {
                 alignItems: "center",
               }}
             >
-              Specialist Listing
-            </Typography> */}
+              Specialist
+            </Typography>
           </Box>
 
           <Box sx={{ display: "flex", gap: 1 }}>

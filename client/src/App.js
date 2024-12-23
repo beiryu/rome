@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider, createTheme, Box } from "@mui/material";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -46,13 +46,25 @@ const App = () => {
       <Router>
         <div className="App">
           <Header />
-          <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/fitness-listing" element={<FitnessListing />} />
-            <Route path="/specialist-listing" element={<SpecialistListing />} />
-            <Route path="/fitness-listing/:id" element={<FitnessDetail />} />
-          </Routes>
-          <Footer />
+          <Box
+            sx={{
+              paddingTop: "64px",
+              minHeight: "100vh",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="/fitness-listing" element={<FitnessListing />} />
+              <Route
+                path="/specialist-listing"
+                element={<SpecialistListing />}
+              />
+              <Route path="/fitness-listing/:id" element={<FitnessDetail />} />
+            </Routes>
+            <Footer />
+          </Box>
         </div>
       </Router>
     </ThemeProvider>
