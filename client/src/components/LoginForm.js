@@ -8,8 +8,10 @@ import {
   Container,
   InputAdornment,
   IconButton,
+  Link,
 } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { Link as RouterLink } from 'react-router-dom';
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -86,18 +88,15 @@ const LoginForm = () => {
               type="submit"
               fullWidth
               variant="contained"
-              sx={{
-                mt: 1,
-                mb: 2,
-                py: 1.5,
-                backgroundColor: 'primary.main',
-                '&:hover': {
-                  backgroundColor: 'primary.dark',
-                },
-              }}
+              sx={{ mt: 3, mb: 2 }}
             >
-              Log In
+              Login
             </Button>
+            <Box sx={{ textAlign: 'center' }}>
+              <Link component={RouterLink} to="/register" variant="body2">
+                Don't have an account? Sign up
+              </Link>
+            </Box>
           </form>
         </Paper>
       </Box>

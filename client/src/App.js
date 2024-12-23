@@ -10,7 +10,7 @@ import SpecialistListing from './pages/SpecialistListing';
 import FitnessDetail from './pages/FitnessDetail';
 import SpecialistDetail from './pages/SpecialistDetail';
 import Login from './pages/Login';
-// import Register from "./pages/Register";
+import Register from './pages/Register';
 // import ForgotPassword from "./pages/ForgotPassword";
 // import AboutUs from "./pages/AboutUs";
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -56,6 +56,7 @@ const App = () => {
           >
             <Routes>
               <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
               <Route path="/" element={<Hero />} />
               <Route path="/fitness-listing" element={<FitnessListing />} />
               <Route path="/fitness-listing/:id" element={<FitnessDetail />} />
