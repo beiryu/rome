@@ -1,43 +1,88 @@
-import React from 'react';
-import '../styles/Footer.css';  // Import CSS for styling the footer
+import React from "react";
+import { Box, Container, Grid, Typography, Link, Stack } from "@mui/material";
 
 const Footer = () => {
-    return (
+  return (
+    <Box
+      component="footer"
+      sx={{
+        bgcolor: "black",
+        color: "white",
+        py: 4,
+        mt: "auto",
+      }}
+    >
+      <Container maxWidth="xl">
+        <Grid container spacing={6}>
+          <Grid item xs={12} sm={4} sx={{ textAlign: "center" }}>
+            <Typography variant="h6" gutterBottom sx={{ mb: 2 }}>
+              Company
+            </Typography>
+            <Stack spacing={1.5} alignItems="center">
+              <Link href="/about-us" color="inherit" underline="hover">
+                About Us
+              </Link>
+              <Link href="/privacy-policy" color="inherit" underline="hover">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" color="inherit" underline="hover">
+                Terms of Service
+              </Link>
+            </Stack>
+          </Grid>
 
-        <footer className="footer">
-            <div className="footer-container">
-                <div className="footer-column">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="/about-us">About Us</a></li>
-                        <li><a href="/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service">Terms of Service</a></li>
-                    </ul>
-                </div>
+          <Grid item xs={12} sm={4} sx={{ textAlign: "center" }}>
+            <Typography variant="h6" gutterBottom sx={{ mb: 2 }}>
+              Portfolio
+            </Typography>
+            <Stack spacing={1.5} alignItems="center">
+              <Link href="/about-fitness" color="inherit" underline="hover">
+                About Fitness
+              </Link>
+              <Link href="/about-specialist" color="inherit" underline="hover">
+                About Specialist
+              </Link>
+            </Stack>
+          </Grid>
 
-                <div className="footer-column">
-                    <h3>Portfolio</h3>
-                    <ul>
-                        <li><a href="/about-fitness">About Fitness</a></li>
-                        <li><a href="/about-specialist">About Specialist</a></li>
-                    </ul>
-                </div>
+          <Grid item xs={12} sm={4} sx={{ textAlign: "center" }}>
+            <Typography variant="h6" gutterBottom sx={{ mb: 2 }}>
+              Social Media
+            </Typography>
+            <Stack spacing={1.5} alignItems="center">
+              <Link
+                href="https://www.youtube.com/channel/UC2Z4hZ2w6OXY__vUC18IY9Q"
+                color="inherit"
+                underline="hover"
+              >
+                Youtube
+              </Link>
+              <Link
+                href="https://cswdesmondcsw.wixsite.com/innovation-product"
+                color="inherit"
+                underline="hover"
+              >
+                Blog
+              </Link>
+            </Stack>
+          </Grid>
+        </Grid>
 
-                <div className="footer-column">
-                    <h3>Social Media</h3>
-                    <ul>
-                        <li><a href="https://www.youtube.com/channel/UC2Z4hZ2w6OXY__vUC18IY9Q">Youtube</a></li>
-                        <li><a href="https://cswdesmondcsw.wixsite.com/innovation-product">Blog</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className="footer-bottom">
-                <p>&copy; 2024 FelizCity All Rights Reserved</p>
-            </div>
-        </footer>
-
-    );
-}
+        <Typography
+          variant="body2"
+          align="center"
+          sx={{
+            mt: 6,
+            pb: 1,
+            pt: 2,
+            borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+          }}
+        >
+          © 2024 FelizCity All Rights Reserved
+        </Typography>
+      </Container>
+    </Box>
+  );
+};
 
 export default Footer;

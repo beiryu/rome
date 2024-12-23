@@ -1,31 +1,70 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../styles/Header.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  Container,
+} from "@mui/material";
+import "../styles/Header.css";
 
 const Header = () => {
-    return (
-        <header className="header">
-            {/* Left Section: FelizCity and the two app names */}
-            <div className="header-left">
-                <Link to="#" className="header-app-name">
-                    <span className="header-brand">FelizCity</span>
-                </Link>
-                <Link to="/fitness-listing" className="header-app-name">
-                    <span>Fitness Listing</span>
-                </Link>
-                <Link to="/specialist-listing" className="header-app-name">
-                    <span>Specialist Listing</span>
-                </Link>
-            </div>
+  return (
+    <AppBar position="fixed" color="default">
+      <Toolbar>
+        <Container
+          maxWidth="xl"
+          sx={{ display: "flex", justifyContent: "space-between" }}
+        >
+          <Box sx={{ flexGrow: 1, display: "flex", gap: 2 }}>
+            <Typography
+              component={Link}
+              to="/"
+              variant="h6"
+              sx={{ textDecoration: "none", color: "inherit" }}
+            >
+              FelizCity
+            </Typography>
+            <Typography
+              component={Link}
+              to="/fitness-listing"
+              sx={{
+                textDecoration: "none",
+                color: "inherit",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              Fitness Listing
+            </Typography>
+            <Typography
+              component={Link}
+              to="/specialist-listing"
+              sx={{
+                textDecoration: "none",
+                color: "inherit",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              Specialist Listing
+            </Typography>
+          </Box>
 
-            {/* Right Section: Login and Signup */}
-            <div className="header-right">
-                <Link to="/login" className="header-link">Login</Link>
-                <Link to="/signup" className="header-link">Sign Up</Link>
-            </div>
-        </header>
-    );
+          <Box sx={{ display: "flex", gap: 1 }}>
+            <Button color="inherit" component={Link} to="/login">
+              Login
+            </Button>
+            <Button color="inherit" component={Link} to="/signup">
+              Sign Up
+            </Button>
+          </Box>
+        </Container>
+      </Toolbar>
+    </AppBar>
+  );
 };
-
 
 export default Header;
