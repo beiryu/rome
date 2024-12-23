@@ -27,7 +27,7 @@ const Header = () => {
             >
               FelizCity
             </Typography>
-            <Typography
+            {/* <Typography
               component={Link}
               to="/fitness-listing"
               sx={{
@@ -50,7 +50,7 @@ const Header = () => {
               }}
             >
               Specialist Listing
-            </Typography>
+            </Typography> */}
           </Box>
 
           <Box sx={{ display: "flex", gap: 1 }}>
