@@ -8,13 +8,13 @@ import Hero from "./components/Hero";
 import FitnessListing from "./pages/FitnessListing";
 import SpecialistListing from "./pages/SpecialistListing";
 import FitnessDetail from "./pages/FitnessDetail";
+import SpecialistDetail from "./pages/SpecialistDetail";
 // import Login from "./pages/Login";
 // import Register from "./pages/Register";
 // import ForgotPassword from "./pages/ForgotPassword";
 // import AboutUs from "./pages/AboutUs";
 // import PrivacyPolicy from "./pages/PrivacyPolicy";
 // import TermsOfUse from "./pages/TermsOfUse";
-// import SpecialistDetail from "./pages/SpecialistDetail";
 
 const theme = createTheme({
   palette: {
@@ -57,11 +57,15 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Hero />} />
               <Route path="/fitness-listing" element={<FitnessListing />} />
+              <Route path="/fitness-listing/:id" element={<FitnessDetail />} />
               <Route
                 path="/specialist-listing"
                 element={<SpecialistListing />}
               />
-              <Route path="/fitness-listing/:id" element={<FitnessDetail />} />
+              <Route
+                path="/specialist-listing/:id"
+                element={<SpecialistDetail />}
+              />
             </Routes>
             <Footer />
           </Box>
