@@ -18,15 +18,20 @@ const Header = () => {
           maxWidth="xl"
           sx={{ display: 'flex', justifyContent: 'space-between' }}
         >
-          <Box sx={{ flexGrow: 1, display: 'flex', gap: 2 }}>
-            <Typography
-              component={Link}
-              to="/"
-              variant="h6"
-              sx={{ textDecoration: 'none', color: 'inherit' }}
-            >
-              FelizCity
-            </Typography>
+          <Typography
+            component={Link}
+            to="/"
+            variant="h6"
+            sx={{
+              textDecoration: 'none',
+              color: 'inherit',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            FelizCity
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: 'flex', gap: 2, marginLeft: 4 }}>
             <Typography
               component={Link}
               to="/fitness-listing"
