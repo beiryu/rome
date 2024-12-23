@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useParams } from 'react-router-dom';
 import {
   Container,
   Grid,
@@ -8,7 +8,7 @@ import {
   Paper,
   Button,
   Rating,
-} from "@mui/material";
+} from '@mui/material';
 
 const FitnessDetail = () => {
   const { id } = useParams();
@@ -16,14 +16,14 @@ const FitnessDetail = () => {
   const fitnessData = {
     id,
     name: "John's Fitness Training",
-    description: "Expert personal training for all fitness levels",
+    description: 'Expert personal training for all fitness levels',
     longDescription:
       "John's Fitness Training is a leading provider of personal training services. With over 10 years of experience, John has helped countless individuals achieve their fitness goals. Whether you're looking to build muscle, lose weight, or improve your overall health, John's Fitness Training can help you get there.",
-    price: "$50/hour",
+    price: '$50/hour',
     rating: 4.8,
-    image: require("../image/hero-fitness.jpeg"),
-    specialties: ["Weight Training", "HIIT", "Yoga"],
-    experience: "10+ years",
+    image: require('../image/hero-fitness.jpeg'),
+    specialties: ['Weight Training', 'HIIT', 'Yoga'],
+    experience: '10+ years',
   };
 
   return (
@@ -35,8 +35,8 @@ const FitnessDetail = () => {
             src={fitnessData.image}
             alt={fitnessData.name}
             sx={{
-              width: "100%",
-              height: "auto",
+              width: '100%',
+              height: 'auto',
               borderRadius: 2,
               mb: 3,
             }}
@@ -44,7 +44,7 @@ const FitnessDetail = () => {
           <Typography variant="h4" component="h1" gutterBottom>
             {fitnessData.name}
           </Typography>
-          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
             <Rating value={fitnessData.rating} precision={0.1} readOnly />
             <Typography variant="body2" sx={{ ml: 1 }}>
               ({fitnessData.rating})

@@ -1,80 +1,80 @@
 /* frontend/src/components/Header.css */
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    /* White background */
-    color: #000;
-    /* Black text */
-    padding: 15px 20px;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  /* White background */
+  color: #000;
+  /* Black text */
+  padding: 15px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
 }
 
 .header-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header-left .header-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: black;
-    margin-right: 20px;
-    /* Space between "FelizCity" and app names */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  margin-right: 20px;
+  /* Space between "FelizCity" and app names */
 }
 
 .header-left .header-app-name {
-    font-size: 1.2rem;
-    font-weight: normal;
-    color: black;
-    text-decoration: none;
-    margin-right: 20px;
-    /* Margin between "FelizCity App" and "HealthMetrics App" */
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+  /* Margin between "FelizCity App" and "HealthMetrics App" */
 }
 
 .header-right {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header-right .header-link {
-    margin-left: 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-    font-weight: normal;
-    transition: color 0.3s ease;
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: normal;
+  transition: color 0.3s ease;
 }
 
 .header-right .header-link:hover {
-    color: #555;
-    /* Slightly lighter color on hover */
+  color: #555;
+  /* Slightly lighter color on hover */
 }
 
 /* Mobile responsiveness: stack elements vertically */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .header-left,
-    .header-right {
-        width: 100%;
-        text-align: center;
-    }
+  .header-left,
+  .header-right {
+    width: 100%;
+    text-align: center;
+  }
 
-    .header-right .header-link {
-        margin: 10px 0;
-    }
+  .header-right .header-link {
+    margin: 10px 0;
+  }
 
-    .header-center .header-app-name {
-        font-size: 1.1rem;
-        /* Reduce font size on mobile */
-    }
+  .header-center .header-app-name {
+    font-size: 1.1rem;
+    /* Reduce font size on mobile */
+  }
 }

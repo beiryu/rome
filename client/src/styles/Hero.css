@@ -1,6 +1,6 @@
 /* Hero section styling */
 .hero {
-  background-image: url("../image/hero-image.jpg");
+  background-image: url('../image/hero-image.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .hero::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;

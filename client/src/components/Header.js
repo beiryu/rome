@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
@@ -7,8 +7,8 @@ import {
   Button,
   Box,
   Container,
-} from "@mui/material";
-import "../styles/Header.css";
+} from '@mui/material';
+import '../styles/Header.css';
 
 const Header = () => {
   return (
@@ -16,14 +16,14 @@ const Header = () => {
       <Toolbar>
         <Container
           maxWidth="xl"
-          sx={{ display: "flex", justifyContent: "space-between" }}
+          sx={{ display: 'flex', justifyContent: 'space-between' }}
         >
-          <Box sx={{ flexGrow: 1, display: "flex", gap: 2 }}>
+          <Box sx={{ flexGrow: 1, display: 'flex', gap: 2 }}>
             <Typography
               component={Link}
               to="/"
               variant="h6"
-              sx={{ textDecoration: "none", color: "inherit" }}
+              sx={{ textDecoration: 'none', color: 'inherit' }}
             >
               FelizCity
             </Typography>
@@ -31,10 +31,10 @@ const Header = () => {
               component={Link}
               to="/fitness-listing"
               sx={{
-                textDecoration: "none",
-                color: "inherit",
-                display: "flex",
-                alignItems: "center",
+                textDecoration: 'none',
+                color: 'inherit',
+                display: 'flex',
+                alignItems: 'center',
               }}
             >
               Fitness
@@ -43,17 +43,17 @@ const Header = () => {
               component={Link}
               to="/specialist-listing"
               sx={{
-                textDecoration: "none",
-                color: "inherit",
-                display: "flex",
-                alignItems: "center",
+                textDecoration: 'none',
+                color: 'inherit',
+                display: 'flex',
+                alignItems: 'center',
               }}
             >
               Specialist
             </Typography>
           </Box>
 
-          <Box sx={{ display: "flex", gap: 1 }}>
+          <Box sx={{ display: 'flex', gap: 1 }}>
             <Button color="inherit" component={Link} to="/login">
               Login
             </Button>

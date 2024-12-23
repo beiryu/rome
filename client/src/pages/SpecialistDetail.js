@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useParams } from 'react-router-dom';
 import {
   Container,
   Grid,
@@ -8,7 +8,7 @@ import {
   Paper,
   Button,
   Rating,
-} from "@mui/material";
+} from '@mui/material';
 
 const SpecialistDetail = () => {
   const { id } = useParams();
@@ -16,14 +16,14 @@ const SpecialistDetail = () => {
   const specialistData = {
     id,
     name: "Dr. Sarah's Nutrition Consulting",
-    description: "Professional nutrition and diet planning",
+    description: 'Professional nutrition and diet planning',
     longDescription:
       "Dr. Sarah's Nutrition Consulting provides expert guidance in nutrition and diet planning. With a focus on sustainable eating habits and personalized meal plans, Dr. Sarah helps clients achieve their health goals through evidence-based nutrition strategies.",
-    price: "$80/session",
+    price: '$80/session',
     rating: 4.9,
-    image: require("../image/hero-specialistconsultation.jpeg"),
-    specialties: ["Nutrition Planning", "Diet Consultation", "Meal Planning"],
-    experience: "15+ years",
+    image: require('../image/hero-specialistconsultation.jpeg'),
+    specialties: ['Nutrition Planning', 'Diet Consultation', 'Meal Planning'],
+    experience: '15+ years',
   };
 
   return (
@@ -35,8 +35,8 @@ const SpecialistDetail = () => {
             src={specialistData.image}
             alt={specialistData.name}
             sx={{
-              width: "100%",
-              height: "auto",
+              width: '100%',
+              height: 'auto',
               borderRadius: 2,
               mb: 3,
             }}
@@ -44,7 +44,7 @@ const SpecialistDetail = () => {
           <Typography variant="h4" component="h1" gutterBottom>
             {specialistData.name}
           </Typography>
-          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
             <Rating value={specialistData.rating} precision={0.1} readOnly />
             <Typography variant="body2" sx={{ ml: 1 }}>
               ({specialistData.rating})

@@ -1,5 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Card,
   CardContent,
@@ -8,7 +8,7 @@ import {
   Rating,
   Box,
   Button,
-} from "@mui/material";
+} from '@mui/material';
 
 const ListingCard = ({ listing, type }) => {
   const navigate = useNavigate();
@@ -20,12 +20,12 @@ const ListingCard = ({ listing, type }) => {
   return (
     <Card
       sx={{
-        height: "100%",
-        display: "flex",
-        flexDirection: "column",
-        "&:hover": {
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        '&:hover': {
           boxShadow: 6,
-          cursor: "pointer",
+          cursor: 'pointer',
         },
       }}
       onClick={handleClick}
@@ -45,9 +45,9 @@ const ListingCard = ({ listing, type }) => {
         </Typography>
         <Box
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
             mb: 2,
           }}
         >

@@ -1,20 +1,20 @@
-import React from "react";
-import { Box, Container, Grid, Typography, Link, Stack } from "@mui/material";
+import React from 'react';
+import { Box, Container, Grid, Typography, Link, Stack } from '@mui/material';
 
 const Footer = () => {
   return (
     <Box
       component="footer"
       sx={{
-        bgcolor: "black",
-        color: "white",
+        bgcolor: 'black',
+        color: 'white',
         py: 4,
-        mt: "auto",
+        mt: 'auto',
       }}
     >
       <Container maxWidth="xl">
         <Grid container spacing={6}>
-          <Grid item xs={12} sm={4} sx={{ textAlign: "center" }}>
+          <Grid item xs={12} sm={4} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" gutterBottom sx={{ mb: 2 }}>
               Company
             </Typography>
@@ -31,7 +31,7 @@ const Footer = () => {
             </Stack>
           </Grid>
 
-          <Grid item xs={12} sm={4} sx={{ textAlign: "center" }}>
+          <Grid item xs={12} sm={4} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" gutterBottom sx={{ mb: 2 }}>
               Portfolio
             </Typography>
@@ -45,7 +45,7 @@ const Footer = () => {
             </Stack>
           </Grid>
 
-          <Grid item xs={12} sm={4} sx={{ textAlign: "center" }}>
+          <Grid item xs={12} sm={4} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" gutterBottom sx={{ mb: 2 }}>
               Social Media
             </Typography>
@@ -75,7 +75,7 @@ const Footer = () => {
             mt: 6,
             pb: 1,
             pt: 2,
-            borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+            borderTop: '1px solid rgba(255, 255, 255, 0.1)',
           }}
         >
           © 2024 FelizCity All Rights Reserved

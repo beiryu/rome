@@ -1,14 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ThemeProvider, createTheme, Box } from "@mui/material";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, createTheme, Box } from '@mui/material';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
 
-import FitnessListing from "./pages/FitnessListing";
-import SpecialistListing from "./pages/SpecialistListing";
-import FitnessDetail from "./pages/FitnessDetail";
-import SpecialistDetail from "./pages/SpecialistDetail";
+import FitnessListing from './pages/FitnessListing';
+import SpecialistListing from './pages/SpecialistListing';
+import FitnessDetail from './pages/FitnessDetail';
+import SpecialistDetail from './pages/SpecialistDetail';
 // import Login from "./pages/Login";
 // import Register from "./pages/Register";
 // import ForgotPassword from "./pages/ForgotPassword";
@@ -19,10 +19,10 @@ import SpecialistDetail from "./pages/SpecialistDetail";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#1f1f1f",
+      main: '#1f1f1f',
     },
     secondary: {
-      main: "#1f1f1f",
+      main: '#1f1f1f',
     },
   },
   typography: {
@@ -48,10 +48,10 @@ const App = () => {
           <Header />
           <Box
             sx={{
-              paddingTop: "64px",
-              minHeight: "100vh",
-              display: "flex",
-              flexDirection: "column",
+              paddingTop: '64px',
+              minHeight: '100vh',
+              display: 'flex',
+              flexDirection: 'column',
             }}
           >
             <Routes>

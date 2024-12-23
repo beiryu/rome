@@ -1,15 +1,15 @@
-import React from "react";
-import { Container, Typography, Grid, Box } from "@mui/material";
-import ListingCard from "../components/ListingCard";
+import React from 'react';
+import { Container, Typography, Grid, Box } from '@mui/material';
+import ListingCard from '../components/ListingCard';
 
 const MOCK_FITNESS_DATA = [
   {
     id: 1,
     name: "John's Fitness Training",
-    description: "Expert personal training for all fitness levels",
-    price: "$50/hour",
+    description: 'Expert personal training for all fitness levels',
+    price: '$50/hour',
     rating: 4.8,
-    image: require("../image/hero-fitness.jpeg"),
+    image: require('../image/hero-fitness.jpeg'),
   },
   // Add more mock data as needed
 ];
