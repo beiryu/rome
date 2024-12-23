@@ -11,7 +11,6 @@ const MOCK_FITNESS_DATA = [
     rating: 4.8,
     image: require('../image/hero-fitness.jpeg'),
   },
-  // Add more mock data as needed
 ];
 
 const FitnessListing = () => {

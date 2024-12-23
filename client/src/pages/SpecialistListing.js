@@ -11,7 +11,6 @@ const MOCK_SPECIALIST_DATA = [
     rating: 4.9,
     image: require('../image/hero-specialistconsultation.jpeg'),
   },
-  // Add more mock data as needed
 ];
 
 const SpecialistListing = () => {
