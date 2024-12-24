@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import ContactForm from '../components/ContactForm';
 import '../styles/AboutFitness.css';
 
 const ContentSection = styled(Paper)(({ theme }) => ({
@@ -97,10 +98,10 @@ const AboutFitnessPage = () => {
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
-                Our certified fitness professionals bring years of experience
-                and expertise to every session. They stay up-to-date with the
-                latest training methodologies and nutrition science to provide
-                you with the most effective guidance for your fitness goals.
+                Our fitness professionals bring years of experience and
+                expertise to every session. They stay up-to-date with the latest
+                training methodologies and nutrition science to provide you with
+                the most effective guidance for your fitness goals.
               </Typography>
             </ContentSection>
           </Grid>
@@ -122,6 +123,7 @@ const AboutFitnessPage = () => {
             </ContentSection>
           </Grid>
         </Grid>
+        <ContactForm type="fitness" />
       </Container>
     </Box>
   );

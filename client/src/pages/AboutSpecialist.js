@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import ContactForm from '../components/ContactForm';
 import '../styles/AboutSpecialist.css';
 
 const ContentSection = styled(Paper)(({ theme }) => ({
@@ -124,6 +125,7 @@ const AboutSpecialistPage = () => {
             </ContentSection>
           </Grid>
         </Grid>
+        <ContactForm type="specialist" />
       </Container>
     </Box>
   );
