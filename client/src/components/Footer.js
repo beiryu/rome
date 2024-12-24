@@ -25,8 +25,8 @@ const Footer = () => {
               <Link href="/privacy-policy" color="inherit" underline="hover">
                 Privacy Policy
               </Link>
-              <Link href="/terms-of-service" color="inherit" underline="hover">
-                Terms of Service
+              <Link href="/terms-of-use" color="inherit" underline="hover">
+                Terms of Use
               </Link>
             </Stack>
           </Grid>

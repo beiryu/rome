@@ -45,7 +45,7 @@ const Hero = () => {
             sx={{
               display: 'flex',
               gap: '1rem',
-              backgroundColor: '#fff',
+              backgroundColor: 'transparent',
               padding: {
                 xs: '0.5rem',
                 sm: '1rem',
@@ -56,8 +56,14 @@ const Hero = () => {
             <TextField
               fullWidth
               placeholder="Search for fitness trainers or specialists..."
-              variant="outlined"
-              sx={{ backgroundColor: 'inherit' }}
+              variant="filled"
+              sx={{
+                backgroundColor: '#fff',
+                borderRadius: 1,
+                '& .MuiFilledInput-input': {
+                  padding: '20px 12px',
+                },
+              }}
             />
             <Button
               variant="contained"

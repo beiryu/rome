@@ -41,7 +41,12 @@ const FitnessDetail = () => {
               mb: 3,
             }}
           />
-          <Typography variant="h4" component="h1" gutterBottom>
+          <Typography
+            variant="h4"
+            component="h1"
+            gutterBottom
+            sx={{ fontWeight: 600 }}
+          >
             {fitnessData.name}
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
