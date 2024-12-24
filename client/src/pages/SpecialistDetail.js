@@ -27,7 +27,7 @@ const SpecialistDetailPage = () => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ py: 4 }}>
+    <Container maxWidth="lg" sx={{ pt: 4, minHeight: 'calc(100vh - 64px)' }}>
       <Grid container spacing={4}>
         <Grid item xs={12} md={8}>
           <Box

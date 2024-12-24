@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import '../styles/AboutUs.css';
+import '../styles/AboutFitness.css';
 
 const ContentSection = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(5),
@@ -19,20 +19,17 @@ const ContentSection = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const AboutUsPage = () => {
+const AboutFitnessPage = () => {
   return (
     <Box>
       <Box
         sx={{
           position: 'relative',
-          height: {
-            xs: '400px',
-            md: '500px',
-          },
+          height: { xs: '400px', md: '500px' },
           marginBottom: 8,
         }}
       >
-        <section className="about-us" />
+        <section className="about-fitness" />
         <Box
           position="relative"
           height="100%"
@@ -53,7 +50,7 @@ const AboutUsPage = () => {
               marginBottom: 2,
             }}
           >
-            About Us
+            Fitness Journey
           </Typography>
           <Typography
             variant="h5"
@@ -66,7 +63,7 @@ const AboutUsPage = () => {
               opacity: 0.9,
             }}
           >
-            Connecting talented educators with passionate learners
+            Transform your life with expert fitness guidance
           </Typography>
         </Box>
       </Box>
@@ -76,18 +73,17 @@ const AboutUsPage = () => {
           <Grid item xs={12}>
             <ContentSection>
               <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
-                Our Mission
+                Personalized Training
               </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
-                We are committed to building a platform that effectively
-                connects learners and teachers. With our team of experienced
-                experts, we strive to deliver the best learning experience for
-                everyone. Our platform enables seamless collaboration between
-                students and educators, fostering an environment of growth and
-                excellence.
+                Our fitness programs are tailored to your individual needs and
+                goals. Whether you're just starting your fitness journey or
+                looking to reach new heights, our experienced trainers will
+                create a customized plan that works for you. We focus on
+                sustainable progress and long-term results.
               </Typography>
             </ContentSection>
           </Grid>
@@ -95,16 +91,16 @@ const AboutUsPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
-                Core Values
+                Expert Guidance
               </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
-                Quality and reliability are our most important values. We
-                believe that everyone deserves access to high-quality education
-                and the opportunity for comprehensive personal development. Our
-                commitment to excellence drives every decision we make.
+                Our certified fitness professionals bring years of experience
+                and expertise to every session. They stay up-to-date with the
+                latest training methodologies and nutrition science to provide
+                you with the most effective guidance for your fitness goals.
               </Typography>
             </ContentSection>
           </Grid>
@@ -112,16 +108,16 @@ const AboutUsPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
-                Vision
+                Comprehensive Support
               </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
-                We aim to become the leading online education platform where
-                everyone can easily access knowledge and develop their skills.
-                With modern technology and a high-quality teaching staff, we are
-                committed to delivering the best learning experience.
+                Beyond just workouts, we provide comprehensive support including
+                nutrition guidance, progress tracking, and lifestyle coaching.
+                Our holistic approach ensures you have all the tools and support
+                needed to achieve your fitness goals.
               </Typography>
             </ContentSection>
           </Grid>
@@ -131,4 +127,4 @@ const AboutUsPage = () => {
   );
 };
 
-export default AboutUsPage;
+export default AboutFitnessPage;

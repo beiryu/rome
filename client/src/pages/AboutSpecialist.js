@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import '../styles/AboutUs.css';
+import '../styles/AboutSpecialist.css';
 
 const ContentSection = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(5),
@@ -19,20 +19,17 @@ const ContentSection = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const AboutUsPage = () => {
+const AboutSpecialistPage = () => {
   return (
     <Box>
       <Box
         sx={{
           position: 'relative',
-          height: {
-            xs: '400px',
-            md: '500px',
-          },
+          height: { xs: '400px', md: '500px' },
           marginBottom: 8,
         }}
       >
-        <section className="about-us" />
+        <section className="about-specialist" />
         <Box
           position="relative"
           height="100%"
@@ -53,7 +50,7 @@ const AboutUsPage = () => {
               marginBottom: 2,
             }}
           >
-            About Us
+            Our Specialists
           </Typography>
           <Typography
             variant="h5"
@@ -66,7 +63,7 @@ const AboutUsPage = () => {
               opacity: 0.9,
             }}
           >
-            Connecting talented educators with passionate learners
+            Meet our team of certified fitness professionals
           </Typography>
         </Box>
       </Box>
@@ -76,18 +73,18 @@ const AboutUsPage = () => {
           <Grid item xs={12}>
             <ContentSection>
               <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
-                Our Mission
+                Professional Excellence
               </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
-                We are committed to building a platform that effectively
-                connects learners and teachers. With our team of experienced
-                experts, we strive to deliver the best learning experience for
-                everyone. Our platform enables seamless collaboration between
-                students and educators, fostering an environment of growth and
-                excellence.
+                Our specialists are among the most qualified fitness
+                professionals in the industry. Each trainer holds multiple
+                certifications and undergoes continuous education to stay at the
+                forefront of fitness science and training methodologies. We
+                pride ourselves on maintaining the highest standards of
+                professional excellence.
               </Typography>
             </ContentSection>
           </Grid>
@@ -95,16 +92,17 @@ const AboutUsPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
-                Core Values
+                Specialized Expertise
               </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
-                Quality and reliability are our most important values. We
-                believe that everyone deserves access to high-quality education
-                and the opportunity for comprehensive personal development. Our
-                commitment to excellence drives every decision we make.
+                Our team includes specialists in various fitness disciplines,
+                from strength training and cardiovascular conditioning to
+                rehabilitation and sports-specific training. This diverse
+                expertise allows us to match you with the perfect trainer for
+                your specific needs and goals.
               </Typography>
             </ContentSection>
           </Grid>
@@ -112,16 +110,16 @@ const AboutUsPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
-                Vision
+                Client Success Focus
               </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
-                We aim to become the leading online education platform where
-                everyone can easily access knowledge and develop their skills.
-                With modern technology and a high-quality teaching staff, we are
-                committed to delivering the best learning experience.
+                Our specialists are dedicated to your success. They work closely
+                with each client, providing personalized attention and support
+                throughout their fitness journey. We measure our success by the
+                achievements and satisfaction of our clients.
               </Typography>
             </ContentSection>
           </Grid>
@@ -131,4 +129,4 @@ const AboutUsPage = () => {
   );
 };
 
-export default AboutUsPage;
+export default AboutSpecialistPage;

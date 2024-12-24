@@ -15,6 +15,8 @@ import ForgotPasswordPage from './pages/ForgotPassword';
 import AboutUsPage from './pages/AboutUs';
 import PrivacyPolicyPage from './pages/PrivacyPolicy';
 import TermsOfUsePage from './pages/TermsOfUse';
+import AboutFitnessPage from './pages/AboutFitness';
+import AboutSpecialistPage from './pages/AboutSpecialist';
 
 const theme = createTheme({
   palette: {
@@ -75,6 +77,11 @@ const App = () => {
               <Route path="/about-us" element={<AboutUsPage />} />
               <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="/terms-of-use" element={<TermsOfUsePage />} />
+              <Route path="/about-fitness" element={<AboutFitnessPage />} />
+              <Route
+                path="/about-specialist"
+                element={<AboutSpecialistPage />}
+              />
             </Routes>
             <Footer />
           </Box>

@@ -15,7 +15,7 @@ const MOCK_FITNESS_DATA = [
 
 const FitnessListingPage = () => {
   return (
-    <Box sx={{ py: 4 }}>
+    <Box sx={{ pt: 4, minHeight: 'calc(100vh - 64px)' }}>
       <Container maxWidth="lg">
         <Typography variant="h4" component="h1" sx={{ mb: 4, fontWeight: 700 }}>
           Fitness Trainers
