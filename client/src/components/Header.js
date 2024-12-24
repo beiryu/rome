@@ -20,12 +20,13 @@ const Header = () => {
           <Typography
             component={Link}
             to="/"
-            variant="h6"
+            variant="h5"
             sx={{
               textDecoration: 'none',
               color: 'inherit',
               display: 'flex',
               alignItems: 'center',
+              fontWeight: 700,
             }}
           >
             FelizCity

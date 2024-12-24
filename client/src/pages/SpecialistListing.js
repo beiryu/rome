@@ -17,7 +17,7 @@ const SpecialistListingPage = () => {
   return (
     <Box sx={{ pt: 4, minHeight: 'calc(100vh - 64px)' }}>
       <Container maxWidth="lg">
-        <Typography variant="h4" component="h1" sx={{ mb: 4, fontWeight: 700 }}>
+        <Typography variant="h4" component="h1" sx={{ mb: 4, fontWeight: 600 }}>
           Health Specialists
         </Typography>
         <Grid container spacing={3}>

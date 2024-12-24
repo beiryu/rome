@@ -39,14 +39,18 @@ const ForgotPasswordForm = () => {
             width: '100%',
           }}
         >
-          <Typography component="h1" variant="h5">
-            Reset Password
+          <Typography
+            component="h1"
+            variant="h4"
+            sx={{ fontWeight: 700, mb: 3 }}
+          >
+            RESET PASSWORD
           </Typography>
           <Typography
             variant="body2"
             sx={{ mt: 2, mb: 3, textAlign: 'center' }}
           >
-            Enter your email address and we'll send you a link to reset your
+            Enter your email address and we'll send you a code to reset your
             password.
           </Typography>
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>

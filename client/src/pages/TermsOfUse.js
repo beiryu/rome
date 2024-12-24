@@ -37,7 +37,11 @@ const TermsOfUsePage = () => {
 
       <Container maxWidth="lg">
         <ContentSection>
-          <Typography variant="h4" gutterBottom sx={{ color: 'primary.main' }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{ color: 'primary.main', fontWeight: 600 }}
+          >
             Agreement to Terms
           </Typography>
           <Typography variant="body1" paragraph>
@@ -50,7 +54,11 @@ const TermsOfUsePage = () => {
         </ContentSection>
 
         <ContentSection>
-          <Typography variant="h4" gutterBottom sx={{ color: 'primary.main' }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{ color: 'primary.main', fontWeight: 600 }}
+          >
             User Responsibilities
           </Typography>
           <Typography variant="body1" paragraph>
@@ -63,7 +71,11 @@ const TermsOfUsePage = () => {
         </ContentSection>
 
         <ContentSection>
-          <Typography variant="h4" gutterBottom sx={{ color: 'primary.main' }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{ color: 'primary.main', fontWeight: 600 }}
+          >
             Intellectual Property
           </Typography>
           <Typography variant="body1" paragraph>

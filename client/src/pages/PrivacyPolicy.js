@@ -37,7 +37,11 @@ const PrivacyPolicyPage = () => {
 
       <Container maxWidth="lg">
         <ContentSection>
-          <Typography variant="h4" gutterBottom sx={{ color: 'primary.main' }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{ color: 'primary.main', fontWeight: 600 }}
+          >
             Information Collection and Use
           </Typography>
           <Typography variant="body1" paragraph>
@@ -50,7 +54,11 @@ const PrivacyPolicyPage = () => {
         </ContentSection>
 
         <ContentSection>
-          <Typography variant="h4" gutterBottom sx={{ color: 'primary.main' }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{ color: 'primary.main', fontWeight: 600 }}
+          >
             Data Protection
           </Typography>
           <Typography variant="body1" paragraph>
@@ -62,7 +70,11 @@ const PrivacyPolicyPage = () => {
         </ContentSection>
 
         <ContentSection>
-          <Typography variant="h4" gutterBottom sx={{ color: 'primary.main' }}>
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{ color: 'primary.main', fontWeight: 600 }}
+          >
             Your Rights
           </Typography>
           <Typography variant="body1" paragraph>

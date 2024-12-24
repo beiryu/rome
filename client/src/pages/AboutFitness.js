@@ -9,11 +9,12 @@ const ContentSection = styled(Paper)(({ theme }) => ({
   marginBottom: theme.spacing(4),
   backgroundColor: '#ffffff',
   boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-  transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
-  borderRadius: '8px',
+  transition: 'all 0.3s ease-in-out',
+  borderRadius: '12px',
+  border: '1px solid rgba(0,0,0,0.05)',
   '&:hover': {
-    transform: 'translateY(-8px)',
-    boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+    transform: 'translateY(-5px)',
+    boxShadow: '0 12px 28px rgba(0,0,0,0.12)',
   },
   [theme.breakpoints.down('sm')]: {
     padding: theme.spacing(3),
@@ -45,10 +46,11 @@ const AboutFitnessPage = () => {
             color="white"
             textAlign="center"
             sx={{
-              fontWeight: 700,
+              fontWeight: 800,
               zIndex: 1,
-              fontSize: { xs: '2.5rem', md: '3.5rem' },
-              marginBottom: 2,
+              fontSize: { xs: '2.5rem', md: '4rem' },
+              marginBottom: 3,
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
             }}
           >
             Fitness Journey
@@ -73,7 +75,11 @@ const AboutFitnessPage = () => {
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <ContentSection>
-              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{ mb: 3, fontWeight: 700 }}
+              >
                 Personalized Training
               </Typography>
               <Typography
@@ -91,7 +97,11 @@ const AboutFitnessPage = () => {
 
           <Grid item xs={12} md={6}>
             <ContentSection>
-              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{ mb: 3, fontWeight: 700 }}
+              >
                 Expert Guidance
               </Typography>
               <Typography
@@ -108,7 +118,11 @@ const AboutFitnessPage = () => {
 
           <Grid item xs={12} md={6}>
             <ContentSection>
-              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{ mb: 3, fontWeight: 700 }}
+              >
                 Comprehensive Support
               </Typography>
               <Typography

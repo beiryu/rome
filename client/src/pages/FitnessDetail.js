@@ -61,7 +61,11 @@ const FitnessDetailPage = () => {
         </Grid>
         <Grid item xs={12} md={4}>
           <Paper sx={{ p: 3 }}>
-            <Typography variant="h5" gutterBottom>
+            <Typography
+              variant="h5"
+              gutterBottom
+              sx={{ fontWeight: 600, mb: 2, fontSize: '1.1rem' }}
+            >
               Booking Information
             </Typography>
             <Typography variant="h4" color="primary" gutterBottom>

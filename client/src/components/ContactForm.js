@@ -54,7 +54,12 @@ const ContactForm = ({ type }) => {
         <Typography
           variant="h4"
           gutterBottom
-          sx={{ color: 'primary.main', mb: 4 }}
+          sx={{
+            color: 'primary.main',
+            mb: 4,
+            textAlign: 'center',
+            fontWeight: 700,
+          }}
         >
           Contact Us
         </Typography>

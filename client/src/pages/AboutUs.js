@@ -21,7 +21,7 @@ const ContentSection = styled(Paper)(({ theme }) => ({
 
 const AboutUsPage = () => {
   return (
-    <Box>
+    <Box sx={{ marginBottom: 8 }}>
       <Box
         sx={{
           position: 'relative',
@@ -47,10 +47,11 @@ const AboutUsPage = () => {
             color="white"
             textAlign="center"
             sx={{
-              fontWeight: 700,
+              fontWeight: 800,
               zIndex: 1,
-              fontSize: { xs: '2.5rem', md: '3.5rem' },
-              marginBottom: 2,
+              fontSize: { xs: '2.5rem', md: '4rem' },
+              marginBottom: 3,
+              textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
             }}
           >
             About Us
@@ -75,7 +76,11 @@ const AboutUsPage = () => {
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <ContentSection>
-              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{ mb: 3, fontWeight: 700 }}
+              >
                 Our Mission
               </Typography>
               <Typography
@@ -94,7 +99,11 @@ const AboutUsPage = () => {
 
           <Grid item xs={12} md={6}>
             <ContentSection>
-              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{ mb: 3, fontWeight: 700 }}
+              >
                 Core Values
               </Typography>
               <Typography
@@ -111,7 +120,11 @@ const AboutUsPage = () => {
 
           <Grid item xs={12} md={6}>
             <ContentSection>
-              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{ mb: 3, fontWeight: 700 }}
+              >
                 Vision
               </Typography>
               <Typography

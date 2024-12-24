@@ -51,8 +51,12 @@ const RegisterForm = () => {
             width: '100%',
           }}
         >
-          <Typography component="h1" variant="h5">
-            Sign Up
+          <Typography
+            component="h1"
+            variant="h4"
+            sx={{ fontWeight: 700, mb: 3 }}
+          >
+            SIGN UP
           </Typography>
           <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
             <TextField

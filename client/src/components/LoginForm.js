@@ -42,8 +42,14 @@ const LoginForm = () => {
     <Container maxWidth="sm">
       <Box sx={{ mt: 8, mb: 4 }}>
         <Paper elevation={3} sx={{ p: 4 }}>
-          <Typography variant="h5" component="h1" gutterBottom align="center">
-            Log In
+          <Typography
+            variant="h4"
+            component="h1"
+            gutterBottom
+            align="center"
+            sx={{ fontWeight: 700, mb: 3 }}
+          >
+            LOGIN
           </Typography>
           <form onSubmit={handleSubmit}>
             <TextField
