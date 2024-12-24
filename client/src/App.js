@@ -12,9 +12,9 @@ import SpecialistDetail from './pages/SpecialistDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import ForgotPassword from './pages/ForgotPassword';
-// import AboutUs from "./pages/AboutUs";
-// import PrivacyPolicy from "./pages/PrivacyPolicy";
-// import TermsOfUse from "./pages/TermsOfUse";
+import AboutUs from './pages/AboutUs';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfUse from './pages/TermsOfUse';
 
 const theme = createTheme({
   palette: {
@@ -69,6 +69,9 @@ const App = () => {
                 path="/specialist-listing/:id"
                 element={<SpecialistDetail />}
               />
+              <Route path="/about-us" element={<AboutUs />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-of-use" element={<TermsOfUse />} />
             </Routes>
             <Footer />
           </Box>
