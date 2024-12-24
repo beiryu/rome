@@ -1,35 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
-
-const HeroWrapper = styled(Box)(({ theme }) => ({
-  position: 'relative',
-  height: '500px',
-  marginBottom: theme.spacing(8),
-  [theme.breakpoints.down('md')]: {
-    height: '400px',
-  },
-}));
-
-const HeroImage = styled('div')({
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  backgroundImage: `url(${'../image/hero-aboutus.jpeg'})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  '&::after': {
-    content: '""',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4))',
-  },
-});
+import '../styles/AboutUs.css';
 
 const ContentSection = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(5),
@@ -47,25 +19,20 @@ const ContentSection = styled(Paper)(({ theme }) => ({
   },
 }));
 
-const StyledTypography = styled(Typography)(({ theme }) => ({
-  position: 'relative',
-  '&::after': {
-    content: '""',
-    position: 'absolute',
-    bottom: '-12px',
-    left: 0,
-    width: '60px',
-    height: '4px',
-    backgroundColor: '#14a800',
-    borderRadius: '2px',
-  },
-}));
-
 const AboutUsPage = () => {
   return (
-    <Box>
-      <HeroWrapper>
-        <HeroImage />
+    <Box sx={{ marginBottom: 8 }}>
+      <Box
+        sx={{
+          position: 'relative',
+          height: {
+            xs: '400px',
+            md: '500px',
+          },
+          marginBottom: 8,
+        }}
+      >
+        <section className="about-us" />
         <Box
           position="relative"
           height="100%"
@@ -102,19 +69,15 @@ const AboutUsPage = () => {
             Connecting talented educators with passionate learners
           </Typography>
         </Box>
-      </HeroWrapper>
+      </Box>
 
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <ContentSection>
-              <StyledTypography
-                variant="h4"
-                gutterBottom
-                sx={{ color: '#14a800', mb: 4 }}
-              >
+              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
                 Our Mission
-              </StyledTypography>
+              </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
@@ -131,13 +94,9 @@ const AboutUsPage = () => {
 
           <Grid item xs={12} md={6}>
             <ContentSection>
-              <StyledTypography
-                variant="h4"
-                gutterBottom
-                sx={{ color: '#14a800', mb: 4 }}
-              >
+              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
                 Core Values
-              </StyledTypography>
+              </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
@@ -152,13 +111,9 @@ const AboutUsPage = () => {
 
           <Grid item xs={12} md={6}>
             <ContentSection>
-              <StyledTypography
-                variant="h4"
-                gutterBottom
-                sx={{ color: '#14a800', mb: 4 }}
-              >
+              <Typography variant="h4" gutterBottom sx={{ mb: 2 }}>
                 Vision
-              </StyledTypography>
+              </Typography>
               <Typography
                 variant="body1"
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}

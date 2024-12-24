@@ -9,16 +9,16 @@ const ContentSection = styled(Paper)(({ theme }) => ({
   boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
 }));
 
-const HeaderBox = styled(Box)(({ theme }) => ({
-  background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4))',
-  padding: theme.spacing(8, 0),
-  marginBottom: theme.spacing(4),
-}));
-
 const TermsOfUsePage = () => {
   return (
-    <Box>
-      <HeaderBox>
+    <Box sx={{ minHeight: 'calc(100vh - 64px)' }}>
+      <Box
+        sx={{
+          background: 'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4))',
+          padding: 8,
+          marginBottom: 4,
+        }}
+      >
         <Container maxWidth="lg">
           <Typography
             variant="h2"
@@ -33,7 +33,7 @@ const TermsOfUsePage = () => {
             Terms of Use
           </Typography>
         </Container>
-      </HeaderBox>
+      </Box>
 
       <Container maxWidth="lg">
         <ContentSection>
