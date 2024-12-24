@@ -10,7 +10,7 @@ import {
   Rating,
 } from '@mui/material';
 
-const FitnessDetail = () => {
+const FitnessDetailPage = () => {
   const { id } = useParams();
 
   const fitnessData = {
@@ -96,4 +96,4 @@ const FitnessDetail = () => {
   );
 };
 
-export default FitnessDetail;
+export default FitnessDetailPage;

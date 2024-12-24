@@ -10,7 +10,7 @@ import {
   Rating,
 } from '@mui/material';
 
-const SpecialistDetail = () => {
+const SpecialistDetailPage = () => {
   const { id } = useParams();
 
   const specialistData = {
@@ -96,4 +96,4 @@ const SpecialistDetail = () => {
   );
 };
 
-export default SpecialistDetail;
+export default SpecialistDetailPage;

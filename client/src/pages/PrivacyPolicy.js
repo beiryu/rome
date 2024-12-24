@@ -15,7 +15,7 @@ const HeaderBox = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(4),
 }));
 
-const PrivacyPolicy = () => {
+const PrivacyPolicyPage = () => {
   return (
     <Box>
       <HeaderBox>
@@ -77,4 +77,4 @@ const PrivacyPolicy = () => {
   );
 };
 
-export default PrivacyPolicy;
+export default PrivacyPolicyPage;

@@ -15,7 +15,7 @@ const HeaderBox = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(4),
 }));
 
-const TermsAndServices = () => {
+const TermsOfUsePage = () => {
   return (
     <Box>
       <HeaderBox>
@@ -79,4 +79,4 @@ const TermsAndServices = () => {
   );
 };
 
-export default TermsAndServices;
+export default TermsOfUsePage;

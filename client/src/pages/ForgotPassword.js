@@ -1,8 +1,8 @@
 import React from 'react';
 import ForgotPasswordForm from '../components/ForgotPasswordForm';
 
-const ForgotPassword = () => {
+const ForgotPasswordPage = () => {
   return <ForgotPasswordForm />;
 };
 
-export default ForgotPassword;
+export default ForgotPasswordPage;

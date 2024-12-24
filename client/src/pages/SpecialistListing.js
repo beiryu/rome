@@ -13,7 +13,7 @@ const MOCK_SPECIALIST_DATA = [
   },
 ];
 
-const SpecialistListing = () => {
+const SpecialistListingPage = () => {
   return (
     <Box sx={{ py: 4 }}>
       <Container maxWidth="lg">
@@ -32,4 +32,4 @@ const SpecialistListing = () => {
   );
 };
 
-export default SpecialistListing;
+export default SpecialistListingPage;

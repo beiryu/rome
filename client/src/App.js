@@ -5,16 +5,16 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 
-import FitnessListing from './pages/FitnessListing';
-import SpecialistListing from './pages/SpecialistListing';
-import FitnessDetail from './pages/FitnessDetail';
-import SpecialistDetail from './pages/SpecialistDetail';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import ForgotPassword from './pages/ForgotPassword';
-import AboutUs from './pages/AboutUs';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfUse from './pages/TermsOfUse';
+import FitnessListingPage from './pages/FitnessListing';
+import SpecialistListingPage from './pages/SpecialistListing';
+import FitnessDetailPage from './pages/FitnessDetail';
+import SpecialistDetailPage from './pages/SpecialistDetail';
+import LoginPage from './pages/Login';
+import RegisterPage from './pages/Register';
+import ForgotPasswordPage from './pages/ForgotPassword';
+import AboutUsPage from './pages/AboutUs';
+import PrivacyPolicyPage from './pages/PrivacyPolicy';
+import TermsOfUsePage from './pages/TermsOfUse';
 
 const theme = createTheme({
   palette: {
@@ -55,23 +55,26 @@ const App = () => {
             }}
           >
             <Routes>
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/forgot-password" element={<ForgotPasswordPage />} />
               <Route path="/" element={<Hero />} />
-              <Route path="/fitness-listing" element={<FitnessListing />} />
-              <Route path="/fitness-listing/:id" element={<FitnessDetail />} />
+              <Route path="/fitness-listing" element={<FitnessListingPage />} />
+              <Route
+                path="/fitness-listing/:id"
+                element={<FitnessDetailPage />}
+              />
               <Route
                 path="/specialist-listing"
-                element={<SpecialistListing />}
+                element={<SpecialistListingPage />}
               />
               <Route
                 path="/specialist-listing/:id"
-                element={<SpecialistDetail />}
+                element={<SpecialistDetailPage />}
               />
-              <Route path="/about-us" element={<AboutUs />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-of-use" element={<TermsOfUse />} />
+              <Route path="/about-us" element={<AboutUsPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+              <Route path="/terms-of-use" element={<TermsOfUsePage />} />
             </Routes>
             <Footer />
           </Box>

@@ -61,7 +61,7 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const AboutUs = () => {
+const AboutUsPage = () => {
   return (
     <Box>
       <HeroWrapper>
@@ -176,4 +176,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUsPage;

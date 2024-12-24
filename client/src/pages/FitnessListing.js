@@ -13,7 +13,7 @@ const MOCK_FITNESS_DATA = [
   },
 ];
 
-const FitnessListing = () => {
+const FitnessListingPage = () => {
   return (
     <Box sx={{ py: 4 }}>
       <Container maxWidth="lg">
@@ -32,4 +32,4 @@ const FitnessListing = () => {
   );
 };
 
-export default FitnessListing;
+export default FitnessListingPage;
