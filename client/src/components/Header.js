@@ -8,7 +8,6 @@ import {
   Box,
   Container,
 } from '@mui/material';
-import '../styles/Header.css';
 
 const Header = () => {
   return (
