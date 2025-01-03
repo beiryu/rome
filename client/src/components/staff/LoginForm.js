@@ -38,9 +38,9 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const success = await login(formData.email, formData.password);
+    const success = await login(formData.email, formData.password, 'staff');
     if (success) {
-      navigate('/dashboard');
+      navigate('/staff/dashboard');
     }
   };
 
@@ -50,7 +50,7 @@ const LoginForm = () => {
 
   return (
     <Container maxWidth='sm'>
-      <Box sx={{ mt: 12, mb: 4 }}>
+      <Box sx={{ mt: 8, mb: 4 }}>
         <Paper elevation={3} sx={{ p: 4 }}>
           <Typography
             variant='h4'
@@ -59,7 +59,7 @@ const LoginForm = () => {
             align='center'
             sx={{ fontWeight: 700, mb: 3 }}
           >
-            LOGIN
+            STAFF LOGIN
           </Typography>
 
           {error && (
@@ -131,13 +131,13 @@ const LoginForm = () => {
                 gap: 2,
               }}
             >
-              <Link component={RouterLink} to='/register' variant='body2'>
+              <Link component={RouterLink} to='/staff/register' variant='body2'>
                 Don&apos;t have an account? Sign up
               </Link>
               <Divider orientation='vertical' flexItem />
               <Link
                 component={RouterLink}
-                to='/forgot-password'
+                to='/staff/forgot-password'
                 variant='body2'
               >
                 Forgot Password?

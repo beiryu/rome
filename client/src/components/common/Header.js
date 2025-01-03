@@ -15,7 +15,7 @@ import {
 } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { Link, useNavigate } from 'react-router-dom';
-import useAuthStore from '../../store/useAuthStore';
+import useAuthStore from '../../stores/useAuthStore';
 
 const pages = [
   { title: 'Fitness', path: '/fitness-listing' },
@@ -52,12 +52,12 @@ const Header = () => {
   };
 
   const handleNavigate = (path) => {
-    navigate(path);
+    navigate(user?.role === 'staff' ? `/staff${path}` : path);
     handleCloseNavMenu();
   };
 
   return (
-    <AppBar position='fixed'>
+    <AppBar position='static'>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
           {/* Logo */}
@@ -176,7 +176,15 @@ const Header = () => {
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
                 >
-                  <MenuItem onClick={() => handleNavigate('/dashboard')}>
+                  <MenuItem
+                    onClick={() =>
+                      navigate(
+                        user?.role === 'staff'
+                          ? '/staff/dashboard'
+                          : '/dashboard'
+                      )
+                    }
+                  >
                     <Typography textAlign='center'>Dashboard</Typography>
                   </MenuItem>
                   <Divider />

@@ -8,19 +8,22 @@ import {
   Grid,
   Avatar,
   IconButton,
+  Alert,
+  CircularProgress,
 } from '@mui/material';
 import { Edit, PhotoCamera } from '@mui/icons-material';
-import useAuthStore from '../../store/useAuthStore';
+import useAuthStore from '../../stores/useAuthStore';
 
-const UserProfile = () => {
-  const { user, updateProfile } = useAuthStore();
-
+const StaffProfile = () => {
+  const { user, updateProfile, loading, error, clearError } = useAuthStore();
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
-    name: user.name,
-    email: user.email,
-    phone: '',
-    address: '',
+    name: user?.name || '',
+    email: user?.email || '',
+    phone: user?.phone || '',
+    department: user?.department || '',
+    position: user?.position || '',
+    bio: user?.bio || '',
   });
 
   const handleChange = (e) => {
@@ -29,19 +32,22 @@ const UserProfile = () => {
       ...prev,
       [name]: value,
     }));
+    if (error) clearError();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    updateProfile(formData);
-    setIsEditing(false);
+    const success = await updateProfile(formData);
+    if (success) {
+      setIsEditing(false);
+    }
   };
 
   return (
     <Paper sx={{ p: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
         <Typography variant='h5' sx={{ fontWeight: 600 }}>
-          Profile Information
+          Staff Profile
         </Typography>
         <Button
           startIcon={<Edit />}
@@ -52,6 +58,12 @@ const UserProfile = () => {
         </Button>
       </Box>
 
+      {error && (
+        <Alert severity='error' sx={{ mb: 3 }}>
+          {error}
+        </Alert>
+      )}
+
       <form onSubmit={handleSubmit}>
         <Grid container spacing={3}>
           {/* Profile Picture */}
@@ -61,11 +73,11 @@ const UserProfile = () => {
                 sx={{
                   width: 120,
                   height: 120,
-                  bgcolor: 'primary.main',
+                  bgcolor: 'secondary.main',
                   fontSize: '3rem',
                 }}
               >
-                JD
+                {user?.name?.charAt(0) || 'S'}
               </Avatar>
               {isEditing && (
                 <IconButton
@@ -74,9 +86,6 @@ const UserProfile = () => {
                     bottom: 0,
                     right: 0,
                     bgcolor: 'background.paper',
-                    '&:hover': {
-                      bgcolor: 'background.paper',
-                    },
                   }}
                   aria-label='upload picture'
                   component='label'
@@ -96,7 +105,7 @@ const UserProfile = () => {
               name='name'
               value={formData.name}
               onChange={handleChange}
-              disabled={!isEditing}
+              disabled={!isEditing || loading}
               required
             />
           </Grid>
@@ -109,7 +118,7 @@ const UserProfile = () => {
               type='email'
               value={formData.email}
               onChange={handleChange}
-              disabled={!isEditing}
+              disabled={!isEditing || loading}
               required
             />
           </Grid>
@@ -121,26 +130,60 @@ const UserProfile = () => {
               name='phone'
               value={formData.phone}
               onChange={handleChange}
-              disabled={!isEditing}
+              disabled={!isEditing || loading}
             />
           </Grid>
 
           <Grid item xs={12} md={6}>
             <TextField
               fullWidth
-              label='Address'
-              name='address'
-              value={formData.address}
+              label='Department'
+              name='department'
+              value={formData.department}
               onChange={handleChange}
-              disabled={!isEditing}
+              disabled={!isEditing || loading}
+            />
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <TextField
+              fullWidth
+              label='Position'
+              name='position'
+              value={formData.position}
+              onChange={handleChange}
+              disabled={!isEditing || loading}
+            />
+          </Grid>
+
+          <Grid item xs={12}>
+            <TextField
+              fullWidth
+              label='Bio'
+              name='bio'
+              value={formData.bio}
+              onChange={handleChange}
+              disabled={!isEditing || loading}
+              multiline
+              rows={4}
             />
           </Grid>
 
           {isEditing && (
             <Grid item xs={12}>
               <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2 }}>
-                <Button variant='contained' color='primary' type='submit'>
-                  Save Changes
+                <Button
+                  variant='contained'
+                  color='primary'
+                  type='submit'
+                  disabled={loading}
+                  sx={{ minWidth: 120, height: 40 }}
+                >
+                  {loading ? (
+                    <CircularProgress size={24} color='inherit' />
+                  ) : (
+                    'Save Changes'
+                  )}
                 </Button>
               </Box>
             </Grid>
@@ -151,4 +194,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default StaffProfile;

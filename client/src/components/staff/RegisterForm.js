@@ -117,7 +117,7 @@ const RegisterForm = () => {
             variant='h4'
             sx={{ fontWeight: 700, mb: 3 }}
           >
-            SIGN UP
+            STAFF SIGN UP
           </Typography>
 
           {error && (
@@ -245,7 +245,7 @@ const RegisterForm = () => {
               )}
             </Button>
             <Box sx={{ textAlign: 'center' }}>
-              <Link component={RouterLink} to='/login' variant='body2'>
+              <Link component={RouterLink} to='/staff/login' variant='body2'>
                 Already have an account? Sign in
               </Link>
             </Box>

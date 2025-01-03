@@ -1,25 +1,40 @@
 /* eslint-disable quotes */
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, createTheme, Box } from '@mui/material';
-import Header from './components/user/Header';
-import Footer from './components/user/Footer';
-import Hero from './components/user/Hero';
+import { ThemeProvider, createTheme } from '@mui/material';
+
+// Auth
 import ProtectedRoute from './components/auth/ProtectedRoute';
 
-import FitnessListingPage from './pages/user/FitnessListing';
-import SpecialistListingPage from './pages/user/SpecialistListing';
-import FitnessDetailPage from './pages/user/FitnessDetail';
-import SpecialistDetailPage from './pages/user/SpecialistDetail';
-import LoginPage from './pages/user/Login';
-import RegisterPage from './pages/user/Register';
-import ForgotPasswordPage from './pages/user/ForgotPassword';
-import AboutUsPage from './pages/user/AboutUs';
-import PrivacyPolicyPage from './pages/user/PrivacyPolicy';
-import TermsOfUsePage from './pages/user/TermsOfUse';
-import AboutFitnessPage from './pages/user/AboutFitness';
-import AboutSpecialistPage from './pages/user/AboutSpecialist';
-import UserDashboard from './pages/user-dashboard/UserDashboard';
+// Common pages
+import Hero from './components/common/Hero';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+import AboutUs from './pages/common/AboutUs';
+import PrivacyPolicy from './pages/common/PrivacyPolicy';
+import TermsOfUse from './pages/common/TermsOfUse';
+import AboutFitness from './pages/common/AboutFitness';
+import AboutSpecialist from './pages/common/AboutSpecialist';
+
+// User pages
+import UserLoginForm from './components/user/LoginForm';
+import UserRegisterForm from './components/user/RegisterForm';
+import UserForgotPasswordForm from './components/user/ForgotPasswordForm';
+import UserDashboard from './pages/user/Dashboard';
+import UserFitnessListing from './pages/user/FitnessListing';
+import UserFitnessDetail from './pages/user/FitnessDetail';
+import UserSpecialistListing from './pages/user/SpecialistListing';
+import UserSpecialistDetail from './pages/user/SpecialistDetail';
+
+// Staff pages
+import StaffLoginForm from './components/staff/LoginForm';
+import StaffRegisterForm from './components/staff/RegisterForm';
+import StaffForgotPasswordForm from './components/staff/ForgotPasswordForm';
+import StaffDashboard from './pages/staff/Dashboard';
+import StaffFitnessListing from './pages/staff/FitnessListing';
+import StaffFitnessDetail from './pages/staff/FitnessDetail';
+import StaffSpecialistListing from './pages/staff/SpecialistListing';
+import StaffSpecialistDetail from './pages/staff/SpecialistDetail';
 
 const theme = createTheme({
   palette: {
@@ -49,53 +64,121 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <div className='App'>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh',
+          }}
+        >
           <Header />
-          <Box
-            sx={{
-              paddingTop: '64px',
-              minHeight: '100vh',
-              display: 'flex',
-              flexDirection: 'column',
-            }}
-          >
+          <main style={{ flex: 1 }}>
             <Routes>
-              <Route path='/login' element={<LoginPage />} />
-              <Route path='/register' element={<RegisterPage />} />
-              <Route path='/forgot-password' element={<ForgotPasswordPage />} />
+              {/* Public routes */}
               <Route path='/' element={<Hero />} />
+              <Route path='/about-us' element={<AboutUs />} />
+              <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+              <Route path='/terms-of-use' element={<TermsOfUse />} />
+              <Route path='/about-fitness' element={<AboutFitness />} />
+              <Route path='/about-specialist' element={<AboutSpecialist />} />
+              <Route path='/login' element={<UserLoginForm />} />
+              <Route path='/register' element={<UserRegisterForm />} />
+              <Route
+                path='/forgot-password'
+                element={<UserForgotPasswordForm />}
+              />
+              <Route path='/staff/login' element={<StaffLoginForm />} />
+              <Route path='/staff/register' element={<StaffRegisterForm />} />
+              <Route
+                path='/staff/forgot-password'
+                element={<StaffForgotPasswordForm />}
+              />
+              {/* Protected user routes */}
               <Route
                 path='/dashboard'
                 element={
-                  <ProtectedRoute>
+                  <ProtectedRoute allowedRoles={['user']}>
                     <UserDashboard />
                   </ProtectedRoute>
                 }
               />
-              <Route path='/fitness-listing' element={<FitnessListingPage />} />
+              <Route
+                path='/fitness-listing'
+                element={
+                  <ProtectedRoute allowedRoles={['user']}>
+                    <UserFitnessListing />
+                  </ProtectedRoute>
+                }
+              />
               <Route
                 path='/fitness-listing/:id'
-                element={<FitnessDetailPage />}
+                element={
+                  <ProtectedRoute allowedRoles={['user']}>
+                    <UserFitnessDetail />
+                  </ProtectedRoute>
+                }
               />
               <Route
                 path='/specialist-listing'
-                element={<SpecialistListingPage />}
+                element={
+                  <ProtectedRoute allowedRoles={['user']}>
+                    <UserSpecialistListing />
+                  </ProtectedRoute>
+                }
               />
               <Route
                 path='/specialist-listing/:id'
-                element={<SpecialistDetailPage />}
+                element={
+                  <ProtectedRoute allowedRoles={['user']}>
+                    <UserSpecialistDetail />
+                  </ProtectedRoute>
+                }
               />
-              <Route path='/about-us' element={<AboutUsPage />} />
-              <Route path='/privacy-policy' element={<PrivacyPolicyPage />} />
-              <Route path='/terms-of-use' element={<TermsOfUsePage />} />
-              <Route path='/about-fitness' element={<AboutFitnessPage />} />
+
+              {/* Protected staff routes */}
               <Route
-                path='/about-specialist'
-                element={<AboutSpecialistPage />}
+                path='/staff/dashboard'
+                element={
+                  <ProtectedRoute allowedRoles={['staff']}>
+                    <StaffDashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='/staff/fitness-listing'
+                element={
+                  <ProtectedRoute allowedRoles={['staff']}>
+                    <StaffFitnessListing />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='/staff/fitness-listing/:id'
+                element={
+                  <ProtectedRoute allowedRoles={['staff']}>
+                    <StaffFitnessDetail />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='/staff/specialist-listing'
+                element={
+                  <ProtectedRoute allowedRoles={['staff']}>
+                    <StaffSpecialistListing />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path='/staff/specialist-listing/:id'
+                element={
+                  <ProtectedRoute allowedRoles={['staff']}>
+                    <StaffSpecialistDetail />
+                  </ProtectedRoute>
+                }
               />
             </Routes>
-            <Footer />
-          </Box>
+          </main>
+          <Footer />
         </div>
       </Router>
     </ThemeProvider>
