@@ -177,13 +177,14 @@ const Header = () => {
                   onClose={handleCloseUserMenu}
                 >
                   <MenuItem
-                    onClick={() =>
+                    onClick={() => {
                       navigate(
                         user?.role === 'staff'
                           ? '/staff/dashboard'
                           : '/dashboard'
-                      )
-                    }
+                      );
+                      handleCloseUserMenu();
+                    }}
                   >
                     <Typography textAlign='center'>Dashboard</Typography>
                   </MenuItem>

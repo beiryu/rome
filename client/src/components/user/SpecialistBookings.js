@@ -197,7 +197,7 @@ const SpecialistBookings = () => {
                       onClick={() => handleRateSession(booking)}
                       color='primary'
                     >
-                      Rate Session
+                      Rate your experience
                     </Button>
                   )}
                 </CardActions>
@@ -214,10 +214,9 @@ const SpecialistBookings = () => {
         maxWidth='sm'
         fullWidth
       >
-        <DialogTitle>Rate Your Consultation</DialogTitle>
+        <DialogTitle>Rate Your Experience</DialogTitle>
         <DialogContent>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, pt: 2 }}>
-            <Typography>How was your consultation?</Typography>
             <Rating
               value={rating}
               onChange={(event, newValue) => setRating(newValue)}

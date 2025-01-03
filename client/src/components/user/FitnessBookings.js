@@ -177,7 +177,7 @@ const FitnessBookings = () => {
                       onClick={() => handleRateSession(booking)}
                       color='primary'
                     >
-                      Rate Session
+                      Rate your experience
                     </Button>
                   )}
                 </CardActions>
@@ -194,10 +194,9 @@ const FitnessBookings = () => {
         maxWidth='sm'
         fullWidth
       >
-        <DialogTitle>Rate Your Session</DialogTitle>
+        <DialogTitle>Rate Your Experience</DialogTitle>
         <DialogContent>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, pt: 2 }}>
-            <Typography>How was your session?</Typography>
             <Rating
               value={rating}
               onChange={(event, newValue) => setRating(newValue)}
