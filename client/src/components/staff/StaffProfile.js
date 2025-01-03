@@ -10,20 +10,28 @@ import {
   IconButton,
   Alert,
   CircularProgress,
+  MenuItem,
 } from '@mui/material';
 import { Edit, PhotoCamera } from '@mui/icons-material';
 import useAuthStore from '../../stores/useAuthStore';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
+const genderOptions = ['Male', 'Female', 'Other'];
 
 const StaffProfile = () => {
   const { user, updateProfile, loading, error, clearError } = useAuthStore();
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
-    name: user?.name || '',
-    email: user?.email || '',
-    phone: user?.phone || '',
-    department: user?.department || '',
-    position: user?.position || '',
-    bio: user?.bio || '',
+    name: user.name || '',
+    email: user.email || '',
+    phone: '',
+    address: '',
+    dateOfBirth: null,
+    gender: '',
+    countryOfResidence: '',
+    nationality: '',
   });
 
   const handleChange = (e) => {
@@ -137,9 +145,59 @@ const StaffProfile = () => {
           <Grid item xs={12} md={6}>
             <TextField
               fullWidth
-              label='Department'
-              name='department'
-              value={formData.department}
+              label='Address'
+              name='address'
+              value={formData.address}
+              onChange={handleChange}
+              disabled={!isEditing || loading}
+            />
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <LocalizationProvider dateAdapter={AdapterDateFns}>
+              <DatePicker
+                label='Date of Birth'
+                value={formData.dateOfBirth}
+                onChange={(newValue) => {
+                  setFormData((prev) => ({
+                    ...prev,
+                    dateOfBirth: newValue,
+                  }));
+                }}
+                disabled={!isEditing}
+                slotProps={{
+                  textField: {
+                    fullWidth: true,
+                  },
+                }}
+              />
+            </LocalizationProvider>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <TextField
+              select
+              fullWidth
+              label='Gender'
+              name='gender'
+              value={formData.gender}
+              onChange={handleChange}
+              disabled={!isEditing}
+            >
+              {genderOptions.map((option) => (
+                <MenuItem key={option} value={option}>
+                  {option}
+                </MenuItem>
+              ))}
+            </TextField>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <TextField
+              fullWidth
+              label='Country of Residence'
+              name='countryOfResidence'
+              value={formData.countryOfResidence}
               onChange={handleChange}
               disabled={!isEditing || loading}
             />
@@ -148,24 +206,11 @@ const StaffProfile = () => {
           <Grid item xs={12} md={6}>
             <TextField
               fullWidth
-              label='Position'
-              name='position'
-              value={formData.position}
+              label='Nationality'
+              name='nationality'
+              value={formData.nationality}
               onChange={handleChange}
               disabled={!isEditing || loading}
-            />
-          </Grid>
-
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label='Bio'
-              name='bio'
-              value={formData.bio}
-              onChange={handleChange}
-              disabled={!isEditing || loading}
-              multiline
-              rows={4}
             />
           </Grid>
 
