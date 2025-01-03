@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import ContactForm from '../components/ContactForm';
-import '../styles/AboutFitness.css';
+import ContactForm from '../../components/user/ContactForm';
+import '../../styles/AboutFitness.css';
 
 const ContentSection = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(5),
@@ -31,20 +31,20 @@ const AboutFitnessPage = () => {
           marginBottom: 8,
         }}
       >
-        <section className="about-fitness" />
+        <section className='about-fitness' />
         <Box
-          position="relative"
-          height="100%"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
+          position='relative'
+          height='100%'
+          display='flex'
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
         >
           <Typography
-            variant="h1"
-            component="h1"
-            color="white"
-            textAlign="center"
+            variant='h1'
+            component='h1'
+            color='white'
+            textAlign='center'
             sx={{
               fontWeight: 800,
               zIndex: 1,
@@ -56,9 +56,9 @@ const AboutFitnessPage = () => {
             Fitness Journey
           </Typography>
           <Typography
-            variant="h5"
-            color="white"
-            textAlign="center"
+            variant='h5'
+            color='white'
+            textAlign='center'
             sx={{
               zIndex: 1,
               maxWidth: '800px',
@@ -71,23 +71,23 @@ const AboutFitnessPage = () => {
         </Box>
       </Box>
 
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{ mb: 3, fontWeight: 700 }}
               >
                 Personalized Training
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 Our fitness programs are tailored to your individual needs and
-                goals. Whether you're just starting your fitness journey or
+                goals. Whether you&apos;re just starting your fitness journey or
                 looking to reach new heights, our experienced trainers will
                 create a customized plan that works for you. We focus on
                 sustainable progress and long-term results.
@@ -98,14 +98,14 @@ const AboutFitnessPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{ mb: 3, fontWeight: 700 }}
               >
                 Expert Guidance
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 Our fitness professionals bring years of experience and
@@ -119,14 +119,14 @@ const AboutFitnessPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{ mb: 3, fontWeight: 700 }}
               >
                 Comprehensive Support
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 Beyond just workouts, we provide comprehensive support including
@@ -137,7 +137,7 @@ const AboutFitnessPage = () => {
             </ContentSection>
           </Grid>
         </Grid>
-        <ContactForm type="fitness" />
+        <ContactForm type='fitness' />
       </Container>
     </Box>
   );

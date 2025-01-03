@@ -19,12 +19,12 @@ const TermsOfUsePage = () => {
           marginBottom: 4,
         }}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth='lg'>
           <Typography
-            variant="h2"
-            component="h1"
-            color="white"
-            textAlign="center"
+            variant='h2'
+            component='h1'
+            color='white'
+            textAlign='center'
             sx={{
               fontWeight: 700,
               fontSize: { xs: '2.5rem', md: '3.5rem' },
@@ -35,33 +35,33 @@ const TermsOfUsePage = () => {
         </Container>
       </Box>
 
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <ContentSection>
           <Typography
-            variant="h5"
+            variant='h5'
             gutterBottom
             sx={{ color: 'primary.main', fontWeight: 600 }}
           >
             Agreement to Terms
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant='body1' paragraph>
             By accessing or using our platform, you agree to be bound by these
             Terms of Service. If you disagree with any part of the terms, you
             may not access the service. We reserve the right to modify these
-            terms at any time, and we'll always post the most current version on
-            our website.
+            terms at any time, and we&apos;ll always post the most current
+            version on our website.
           </Typography>
         </ContentSection>
 
         <ContentSection>
           <Typography
-            variant="h5"
+            variant='h5'
             gutterBottom
             sx={{ color: 'primary.main', fontWeight: 600 }}
           >
             User Responsibilities
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant='body1' paragraph>
             Users are responsible for maintaining the confidentiality of their
             account and password. You agree to accept responsibility for all
             activities that occur under your account. You must notify us
@@ -72,13 +72,13 @@ const TermsOfUsePage = () => {
 
         <ContentSection>
           <Typography
-            variant="h5"
+            variant='h5'
             gutterBottom
             sx={{ color: 'primary.main', fontWeight: 600 }}
           >
             Intellectual Property
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant='body1' paragraph>
             The service and its original content, features, and functionality
             are and will remain the exclusive property of our platform and its
             licensors. Our platform is protected by copyright, trademark, and

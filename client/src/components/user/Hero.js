@@ -1,13 +1,13 @@
 import React from 'react';
 import { Box, Typography, TextField, Button, Container } from '@mui/material';
-import '../styles/Hero.css';
+import '../../styles/Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <Container maxWidth="lg">
+    <section className='hero'>
+      <Container maxWidth='lg'>
         <Box
-          className="hero-content"
+          className='hero-content'
           sx={{
             backgroundColor: 'rgba(255, 255, 255, 0.7)',
             padding: {
@@ -26,8 +26,8 @@ const Hero = () => {
           }}
         >
           <Typography
-            variant="h1"
-            className="hero-title"
+            variant='h1'
+            className='hero-title'
             sx={{
               color: 'black',
               marginBottom: '2rem',
@@ -55,8 +55,8 @@ const Hero = () => {
           >
             <TextField
               fullWidth
-              placeholder="Search for fitness trainers or specialists..."
-              variant="filled"
+              placeholder='Search for fitness trainers or specialists...'
+              variant='filled'
               sx={{
                 backgroundColor: '#fff',
                 borderRadius: 1,
@@ -66,8 +66,8 @@ const Hero = () => {
               }}
             />
             <Button
-              variant="contained"
-              color="primary"
+              variant='contained'
+              color='primary'
               sx={{
                 minWidth: {
                   xs: '100px',

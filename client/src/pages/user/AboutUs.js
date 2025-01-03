@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import '../styles/AboutUs.css';
+import '../../styles/AboutUs.css';
 
 const ContentSection = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(5),
@@ -32,20 +32,20 @@ const AboutUsPage = () => {
           marginBottom: 8,
         }}
       >
-        <section className="about-us" />
+        <section className='about-us' />
         <Box
-          position="relative"
-          height="100%"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
+          position='relative'
+          height='100%'
+          display='flex'
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
         >
           <Typography
-            variant="h1"
-            component="h1"
-            color="white"
-            textAlign="center"
+            variant='h1'
+            component='h1'
+            color='white'
+            textAlign='center'
             sx={{
               fontWeight: 800,
               zIndex: 1,
@@ -57,9 +57,9 @@ const AboutUsPage = () => {
             About Us
           </Typography>
           <Typography
-            variant="h5"
-            color="white"
-            textAlign="center"
+            variant='h5'
+            color='white'
+            textAlign='center'
             sx={{
               zIndex: 1,
               maxWidth: '800px',
@@ -72,19 +72,19 @@ const AboutUsPage = () => {
         </Box>
       </Box>
 
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{ mb: 3, fontWeight: 700 }}
               >
                 Our Mission
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 We are committed to building a platform that effectively
@@ -100,14 +100,14 @@ const AboutUsPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{ mb: 3, fontWeight: 700 }}
               >
                 Core Values
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 Quality and reliability are our most important values. We
@@ -121,14 +121,14 @@ const AboutUsPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{ mb: 3, fontWeight: 700 }}
               >
                 Vision
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 We aim to become the leading online education platform where

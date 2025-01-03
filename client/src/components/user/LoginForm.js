@@ -10,11 +10,17 @@ import {
   IconButton,
   Link,
   Divider,
+  Alert,
+  CircularProgress,
 } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import useAuthStore from '../../store/useAuthStore';
 
 const LoginForm = () => {
+  const navigate = useNavigate();
+  const { login, error, loading, clearError } = useAuthStore();
+
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -27,11 +33,15 @@ const LoginForm = () => {
       ...prev,
       [name]: value,
     }));
+    if (error) clearError();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    const success = await login(formData.email, formData.password);
+    if (success) {
+      navigate('/dashboard');
+    }
   };
 
   const handleClickShowPassword = () => {
@@ -39,50 +49,59 @@ const LoginForm = () => {
   };
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth='sm'>
       <Box sx={{ mt: 8, mb: 4 }}>
         <Paper elevation={3} sx={{ p: 4 }}>
           <Typography
-            variant="h4"
-            component="h1"
+            variant='h4'
+            component='h1'
             gutterBottom
-            align="center"
+            align='center'
             sx={{ fontWeight: 700, mb: 3 }}
           >
             LOGIN
           </Typography>
+
+          {error && (
+            <Alert severity='error' sx={{ mb: 3 }}>
+              {error}
+            </Alert>
+          )}
+
           <form onSubmit={handleSubmit}>
             <TextField
-              margin="normal"
+              margin='normal'
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id='email'
+              label='Email Address'
+              name='email'
+              autoComplete='email'
               autoFocus
               value={formData.email}
               onChange={handleChange}
+              disabled={loading}
               sx={{ mb: 2 }}
             />
             <TextField
-              margin="normal"
+              margin='normal'
               required
               fullWidth
-              name="password"
-              label="Password"
+              name='password'
+              label='Password'
               type={showPassword ? 'text' : 'password'}
-              id="password"
-              autoComplete="current-password"
+              id='password'
+              autoComplete='current-password'
               value={formData.password}
               onChange={handleChange}
+              disabled={loading}
               InputProps={{
                 endAdornment: (
-                  <InputAdornment position="end">
+                  <InputAdornment position='end'>
                     <IconButton
-                      aria-label="toggle password visibility"
+                      aria-label='toggle password visibility'
                       onClick={handleClickShowPassword}
-                      edge="end"
+                      edge='end'
                     >
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
@@ -92,12 +111,17 @@ const LoginForm = () => {
               sx={{ mb: 3 }}
             />
             <Button
-              type="submit"
+              type='submit'
               fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              variant='contained'
+              disabled={loading}
+              sx={{ mt: 3, mb: 2, height: 48 }}
             >
-              Login
+              {loading ? (
+                <CircularProgress size={24} color='inherit' />
+              ) : (
+                'Login'
+              )}
             </Button>
             <Box
               sx={{
@@ -107,14 +131,14 @@ const LoginForm = () => {
                 gap: 2,
               }}
             >
-              <Link component={RouterLink} to="/register" variant="body2">
-                Don't have an account? Sign up
+              <Link component={RouterLink} to='/register' variant='body2'>
+                Don&apos;t have an account? Sign up
               </Link>
-              <Divider orientation="vertical" flexItem />
+              <Divider orientation='vertical' flexItem />
               <Link
                 component={RouterLink}
-                to="/forgot-password"
-                variant="body2"
+                to='/forgot-password'
+                variant='body2'
               >
                 Forgot Password?
               </Link>

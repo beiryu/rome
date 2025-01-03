@@ -9,29 +9,30 @@ import {
   Button,
   Rating,
 } from '@mui/material';
+import heroFitness from '../../image/hero-fitness.jpeg';
 
 const FitnessDetailPage = () => {
   const { id } = useParams();
 
   const fitnessData = {
     id,
-    name: "John's Fitness Training",
+    name: 'John Fitness Training',
     description: 'Expert personal training for all fitness levels',
     longDescription:
-      "John's Fitness Training is a leading provider of personal training services. With over 10 years of experience, John has helped countless individuals achieve their fitness goals. Whether you're looking to build muscle, lose weight, or improve your overall health, John's Fitness Training can help you get there.",
+      'John Fitness Training is a leading provider of personal training services. With over 10 years of experience, John has helped countless individuals achieve their fitness goals. Whether you&apos;re looking to build muscle, lose weight, or improve your overall health, John&apos;s Fitness Training can help you get there.',
     price: '$50/hour',
     rating: 4.8,
-    image: require('../image/hero-fitness.jpeg'),
+    image: heroFitness,
     specialties: ['Weight Training', 'HIIT', 'Yoga'],
     experience: '10+ years',
   };
 
   return (
-    <Container maxWidth="lg" sx={{ pt: 4, minHeight: 'calc(100vh - 64px)' }}>
+    <Container maxWidth='lg' sx={{ pt: 4, minHeight: 'calc(100vh - 64px)' }}>
       <Grid container spacing={4}>
         <Grid item xs={12} md={8}>
           <Box
-            component="img"
+            component='img'
             src={fitnessData.image}
             alt={fitnessData.name}
             sx={{
@@ -42,8 +43,8 @@ const FitnessDetailPage = () => {
             }}
           />
           <Typography
-            variant="h4"
-            component="h1"
+            variant='h4'
+            component='h1'
             gutterBottom
             sx={{ fontWeight: 600 }}
           >
@@ -51,46 +52,46 @@ const FitnessDetailPage = () => {
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
             <Rating value={fitnessData.rating} precision={0.1} readOnly />
-            <Typography variant="body2" sx={{ ml: 1 }}>
+            <Typography variant='body2' sx={{ ml: 1 }}>
               ({fitnessData.rating})
             </Typography>
           </Box>
-          <Typography variant="body1" paragraph>
+          <Typography variant='body1' paragraph>
             {fitnessData.longDescription}
           </Typography>
         </Grid>
         <Grid item xs={12} md={4}>
           <Paper sx={{ p: 3 }}>
             <Typography
-              variant="h5"
+              variant='h5'
               gutterBottom
               sx={{ fontWeight: 600, mb: 2, fontSize: '1.1rem' }}
             >
               Booking Information
             </Typography>
-            <Typography variant="h4" color="primary" gutterBottom>
+            <Typography variant='h4' color='primary' gutterBottom>
               {fitnessData.price}
             </Typography>
             <Button
-              variant="contained"
-              color="primary"
+              variant='contained'
+              color='primary'
               fullWidth
-              size="large"
+              size='large'
               sx={{ mb: 2 }}
             >
               Book Now
             </Button>
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography variant='subtitle1' gutterBottom>
               Specialties:
             </Typography>
             <Box sx={{ mb: 2 }}>
               {fitnessData.specialties.map((specialty, index) => (
-                <Typography key={index} variant="body2">
+                <Typography key={index} variant='body2'>
                   • {specialty}
                 </Typography>
               ))}
             </Box>
-            <Typography variant="subtitle1">
+            <Typography variant='subtitle1'>
               Experience: {fitnessData.experience}
             </Typography>
           </Paper>

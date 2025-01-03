@@ -16,11 +16,12 @@ const ForgotPasswordForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // eslint-disable-next-line no-console
     console.log('Reset password for email:', email);
   };
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component='main' maxWidth='xs'>
       <Box
         sx={{
           marginTop: 8,
@@ -40,53 +41,53 @@ const ForgotPasswordForm = () => {
           }}
         >
           <Typography
-            component="h1"
-            variant="h4"
+            component='h1'
+            variant='h4'
             sx={{ fontWeight: 700, mb: 3 }}
           >
             RESET PASSWORD
           </Typography>
           <Typography
-            variant="body2"
+            variant='body2'
             sx={{ mt: 2, mb: 3, textAlign: 'center' }}
           >
-            Enter your email address and we'll send you a code to reset your
-            password.
+            Enter your email address and we&apos;ll send you a code to reset
+            your password.
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 1 }}>
+          <Box component='form' onSubmit={handleSubmit} sx={{ mt: 1 }}>
             <TextField
-              margin="normal"
+              margin='normal'
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id='email'
+              label='Email Address'
+              name='email'
+              autoComplete='email'
               autoFocus
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
-              margin="normal"
+              margin='normal'
               required
               fullWidth
-              id="verificationCode"
-              label="Verification Code"
-              name="verificationCode"
-              autoComplete="verificationCode"
+              id='verificationCode'
+              label='Verification Code'
+              name='verificationCode'
+              autoComplete='verificationCode'
               value={verificationCode}
               onChange={(e) => setVerificationCode(e.target.value)}
             />
             <Button
-              type="submit"
+              type='submit'
               fullWidth
-              variant="contained"
+              variant='contained'
               sx={{ mt: 3, mb: 2 }}
             >
               Reset
             </Button>
             <Box sx={{ textAlign: 'center' }}>
-              <Link component={RouterLink} to="/login" variant="body2">
+              <Link component={RouterLink} to='/login' variant='body2'>
                 Back to Sign In
               </Link>
             </Box>

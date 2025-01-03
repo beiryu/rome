@@ -19,12 +19,12 @@ const PrivacyPolicyPage = () => {
           marginBottom: 4,
         }}
       >
-        <Container maxWidth="lg">
+        <Container maxWidth='lg'>
           <Typography
-            variant="h2"
-            component="h1"
-            color="white"
-            textAlign="center"
+            variant='h2'
+            component='h1'
+            color='white'
+            textAlign='center'
             sx={{
               fontWeight: 700,
               fontSize: { xs: '2.5rem', md: '3.5rem' },
@@ -35,16 +35,16 @@ const PrivacyPolicyPage = () => {
         </Container>
       </Box>
 
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <ContentSection>
           <Typography
-            variant="h5"
+            variant='h5'
             gutterBottom
             sx={{ color: 'primary.main', fontWeight: 600 }}
           >
             Information Collection and Use
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant='body1' paragraph>
             We collect several different types of information for various
             purposes to provide and improve our service to you. While using our
             service, we may ask you to provide us with certain personally
@@ -55,13 +55,13 @@ const PrivacyPolicyPage = () => {
 
         <ContentSection>
           <Typography
-            variant="h5"
+            variant='h5'
             gutterBottom
             sx={{ color: 'primary.main', fontWeight: 600 }}
           >
             Data Protection
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant='body1' paragraph>
             The security of your data is important to us. We implement
             appropriate security measures to protect your personal information.
             However, remember that no method of transmission over the Internet
@@ -71,13 +71,13 @@ const PrivacyPolicyPage = () => {
 
         <ContentSection>
           <Typography
-            variant="h5"
+            variant='h5'
             gutterBottom
             sx={{ color: 'primary.main', fontWeight: 600 }}
           >
             Your Rights
           </Typography>
-          <Typography variant="body1" paragraph>
+          <Typography variant='body1' paragraph>
             You have the right to access, update, or delete your personal
             information at any time. You can exercise these rights by contacting
             us through the contact information provided on our website. We will

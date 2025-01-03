@@ -45,14 +45,15 @@ const ContactForm = ({ type }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // eslint-disable-next-line no-console
     console.log('Form submitted:', formData);
   };
 
   return (
-    <Container maxWidth="md" sx={{ my: 8 }}>
+    <Container maxWidth='md' sx={{ my: 8 }}>
       <Paper elevation={3} sx={{ p: 4 }}>
         <Typography
-          variant="h4"
+          variant='h4'
           gutterBottom
           sx={{
             color: 'primary.main',
@@ -68,25 +69,25 @@ const ContactForm = ({ type }) => {
             <TextField
               required
               fullWidth
-              label="Name"
-              name="name"
+              label='Name'
+              name='name'
               value={formData.name}
               onChange={handleChange}
             />
             <TextField
               required
               fullWidth
-              label="Email"
-              name="email"
-              type="email"
+              label='Email'
+              name='email'
+              type='email'
               value={formData.email}
               onChange={handleChange}
             />
             <TextField
               required
               fullWidth
-              label="Phone"
-              name="phone"
+              label='Phone'
+              name='phone'
               value={formData.phone}
               onChange={handleChange}
             />
@@ -94,8 +95,8 @@ const ContactForm = ({ type }) => {
               required
               fullWidth
               select
-              label="Service"
-              name="service"
+              label='Service'
+              name='service'
               value={formData.service}
               onChange={handleChange}
             >
@@ -112,15 +113,15 @@ const ContactForm = ({ type }) => {
               fullWidth
               multiline
               rows={4}
-              label="Message"
-              name="message"
+              label='Message'
+              name='message'
               value={formData.message}
               onChange={handleChange}
             />
             <Button
-              type="submit"
-              variant="contained"
-              size="large"
+              type='submit'
+              variant='contained'
+              size='large'
               sx={{
                 mt: 2,
                 bgcolor: 'primary.main',

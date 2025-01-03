@@ -9,29 +9,30 @@ import {
   Button,
   Rating,
 } from '@mui/material';
+import heroSpecialistConsultation from '../../image/hero-specialistconsultation.jpeg';
 
 const SpecialistDetailPage = () => {
   const { id } = useParams();
 
   const specialistData = {
     id,
-    name: "Dr. Sarah's Nutrition Consulting",
+    name: 'Dr. Sarah Nutrition Consulting',
     description: 'Professional nutrition and diet planning',
     longDescription:
-      "Dr. Sarah's Nutrition Consulting provides expert guidance in nutrition and diet planning. With a focus on sustainable eating habits and personalized meal plans, Dr. Sarah helps clients achieve their health goals through evidence-based nutrition strategies.",
+      'Dr. Sarah Nutrition Consulting provides expert guidance in nutrition and diet planning. With a focus on sustainable eating habits and personalized meal plans, Dr. Sarah helps clients achieve their health goals through evidence-based nutrition strategies.',
     price: '$80/session',
     rating: 4.9,
-    image: require('../image/hero-specialistconsultation.jpeg'),
+    image: heroSpecialistConsultation,
     specialties: ['Nutrition Planning', 'Diet Consultation', 'Meal Planning'],
     experience: '15+ years',
   };
 
   return (
-    <Container maxWidth="lg" sx={{ pt: 4, minHeight: 'calc(100vh - 64px)' }}>
+    <Container maxWidth='lg' sx={{ pt: 4, minHeight: 'calc(100vh - 64px)' }}>
       <Grid container spacing={4}>
         <Grid item xs={12} md={8}>
           <Box
-            component="img"
+            component='img'
             src={specialistData.image}
             alt={specialistData.name}
             sx={{
@@ -42,8 +43,8 @@ const SpecialistDetailPage = () => {
             }}
           />
           <Typography
-            variant="h4"
-            component="h1"
+            variant='h4'
+            component='h1'
             gutterBottom
             sx={{ fontWeight: 600 }}
           >
@@ -51,46 +52,46 @@ const SpecialistDetailPage = () => {
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
             <Rating value={specialistData.rating} precision={0.1} readOnly />
-            <Typography variant="body2" sx={{ ml: 1 }}>
+            <Typography variant='body2' sx={{ ml: 1 }}>
               ({specialistData.rating})
             </Typography>
           </Box>
-          <Typography variant="body1" paragraph>
+          <Typography variant='body1' paragraph>
             {specialistData.longDescription}
           </Typography>
         </Grid>
         <Grid item xs={12} md={4}>
           <Paper sx={{ p: 3 }}>
             <Typography
-              variant="h5"
+              variant='h5'
               gutterBottom
               sx={{ fontWeight: 600, mb: 2, fontSize: '1.1rem' }}
             >
               Booking Information
             </Typography>
-            <Typography variant="h4" color="primary" gutterBottom>
+            <Typography variant='h4' color='primary' gutterBottom>
               {specialistData.price}
             </Typography>
             <Button
-              variant="contained"
-              color="primary"
+              variant='contained'
+              color='primary'
               fullWidth
-              size="large"
+              size='large'
               sx={{ mb: 2 }}
             >
               Book Now
             </Button>
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography variant='subtitle1' gutterBottom>
               Specialties:
             </Typography>
             <Box sx={{ mb: 2 }}>
               {specialistData.specialties.map((specialty, index) => (
-                <Typography key={index} variant="body2">
+                <Typography key={index} variant='body2'>
                   • {specialty}
                 </Typography>
               ))}
             </Box>
-            <Typography variant="subtitle1">
+            <Typography variant='subtitle1'>
               Experience: {specialistData.experience}
             </Typography>
           </Paper>

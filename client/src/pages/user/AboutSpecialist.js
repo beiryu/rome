@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import ContactForm from '../components/ContactForm';
-import '../styles/AboutSpecialist.css';
+import ContactForm from '../../components/user/ContactForm';
+import '../../styles/AboutSpecialist.css';
 
 const ContentSection = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(5),
@@ -31,20 +31,20 @@ const AboutSpecialistPage = () => {
           marginBottom: 8,
         }}
       >
-        <section className="about-specialist" />
+        <section className='about-specialist' />
         <Box
-          position="relative"
-          height="100%"
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          justifyContent="center"
+          position='relative'
+          height='100%'
+          display='flex'
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
         >
           <Typography
-            variant="h1"
-            component="h1"
-            color="white"
-            textAlign="center"
+            variant='h1'
+            component='h1'
+            color='white'
+            textAlign='center'
             sx={{
               fontWeight: 800,
               zIndex: 1,
@@ -56,9 +56,9 @@ const AboutSpecialistPage = () => {
             Our Specialists
           </Typography>
           <Typography
-            variant="h5"
-            color="white"
-            textAlign="center"
+            variant='h5'
+            color='white'
+            textAlign='center'
             sx={{
               zIndex: 1,
               maxWidth: '800px',
@@ -71,12 +71,12 @@ const AboutSpecialistPage = () => {
         </Box>
       </Box>
 
-      <Container maxWidth="lg">
+      <Container maxWidth='lg'>
         <Grid container spacing={4}>
           <Grid item xs={12}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{
                   mb: 3,
@@ -86,7 +86,7 @@ const AboutSpecialistPage = () => {
                 Professional Excellence
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 Our specialists are among the most qualified fitness
@@ -102,14 +102,14 @@ const AboutSpecialistPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{ mb: 3, fontWeight: 700 }}
               >
                 Specialized Expertise
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 Our team includes specialists in various fitness disciplines,
@@ -124,14 +124,14 @@ const AboutSpecialistPage = () => {
           <Grid item xs={12} md={6}>
             <ContentSection>
               <Typography
-                variant="h5"
+                variant='h5'
                 gutterBottom
                 sx={{ mb: 3, fontWeight: 700 }}
               >
                 Client Success Focus
               </Typography>
               <Typography
-                variant="body1"
+                variant='body1'
                 sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}
               >
                 Our specialists are dedicated to your success. They work closely
@@ -142,7 +142,7 @@ const AboutSpecialistPage = () => {
             </ContentSection>
           </Grid>
         </Grid>
-        <ContactForm type="specialist" />
+        <ContactForm type='specialist' />
       </Container>
     </Box>
   );
